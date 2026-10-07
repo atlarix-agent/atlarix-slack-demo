@@ -4,6 +4,11 @@ export function cartTotal(lines, discountPercent = 0) {
   return Math.round(subtotal * (1 - discountPercent / 100));
 }
 
+/** Total number of items in a cart: sum of each line's quantity. */
+export function itemCount(lines) {
+  return lines.reduce((sum, line) => sum + line.quantity, 0);
+}
+
 /** "$12.34" from 1234 cents. */
 export function formatCents(cents) {
   return `$${(cents / 100).toFixed(2)}`;
