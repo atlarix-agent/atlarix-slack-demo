@@ -6,5 +6,5 @@ A tiny project for trying [Atlarix for Slack](https://atlarix.dev/slack): mentio
 
 Try, for example:
 
-- `atlarix-demo/atlarix-slack-demo: fix the failing test`
-- `atlarix-demo/atlarix-slack-demo: add a function that returns the number of items in a cart, with a test`
+- `atlarix-agent/atlarix-slack-demo: fix the failing test`
+- `atlarix-agent/atlarix-slack-demo: add a function that returns the number of items in a cart, with a test`
