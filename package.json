@@ -1,0 +1,8 @@
+{
+  "name": "atlarix-slack-demo",
+  "version": "1.0.0",
+  "description": "A tiny project for trying Atlarix from Slack: ask it for a change, get a pull request.",
+  "type": "module",
+  "scripts": { "test": "node --test" },
+  "license": "MIT"
+}
