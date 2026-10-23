@@ -15,6 +15,12 @@ export function minPrice(lines) {
   return lines.reduce((min, line) => Math.min(min, line.priceCents), Infinity);
 }
 
+/** Average single-line price in cents; 0 for an empty cart, like maxPrice. */
+export function averagePrice(lines) {
+  if (lines.length === 0) return 0;
+  return Math.round(lines.reduce((sum, line) => sum + line.priceCents, 0) / lines.length);
+}
+
 /** "$12.34" from 1234 cents. */
 export function formatCents(cents) {
   return `$${(cents / 100).toFixed(2)}`;
