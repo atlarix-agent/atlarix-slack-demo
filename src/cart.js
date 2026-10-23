@@ -15,6 +15,14 @@ export function minPrice(lines) {
   return lines.reduce((min, line) => Math.min(min, line.priceCents), Infinity);
 }
 
+/** Quantity-weighted average price in cents; 0 for an empty cart, like maxPrice. */
+export function averagePrice(lines) {
+  const totalQuantity = lines.reduce((sum, line) => sum + line.quantity, 0);
+  if (totalQuantity === 0) return 0;
+  const totalCents = lines.reduce((sum, line) => sum + line.priceCents * line.quantity, 0);
+  return Math.round(totalCents / totalQuantity);
+}
+
 /** "$12.34" from 1234 cents. */
 export function formatCents(cents) {
   return `$${(cents / 100).toFixed(2)}`;
